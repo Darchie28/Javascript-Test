@@ -13,7 +13,7 @@ console.log("Login Test 1:", validateLogin("admin", "1234") === true ? "Pass" :
 "Fail");
 console.log("Login Test 2:", validateLogin("", "1234") === false ? "Pass" :
 "Fail");
-console.log("Login Test 3:", validateLogin("admin", "") === fail ? "Pass" :
+console.log("Login Test 3:", validateLogin("admin", "") === false ? "Pass" :
 "Fail"); // Incorrect expected value
 // Missing Tests
 // - Invalid username/password combinations

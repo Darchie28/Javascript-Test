@@ -1,14 +1,16 @@
 // Shopping Cart Functions
 let cart = [];
 function addItem(item, quantity) {
-if (quantity < 1) {
-console.log("Error: Quantity must be at least 1");
-return;
-}cart.push({ item, quantity });
+  // Check the quantity first (must be >= 1)
+  if (quantity < 1) {
+    console.log("Error: Quantity must be at least 1");
+    return;
+  }
+  // Only push the item if the check passes
+  cart.push({ item, quantity }); 
 }
 function removeItem(item) {
-cart = cart.filter(cartItem => cartItem.item.toLowerCase() !== item.toLowerCase()); // Doesn't handle
-// case sensitivity
+cart = cart.filter(cartItem => cartItem.item !== item.toLowerCase()); 
 }
 function getCartTotal() {
 return cart.reduce((total, cartItem) => total + cartItem.quantity, 0);
