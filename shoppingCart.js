@@ -23,5 +23,13 @@ console.log("Cart Total Test 1:", getCartTotal() === 3 ? "Pass" : "Fail"); //
 // Fails due to bug
 // Missing Tests
 // - Adding duplicate items
+// Clear cart for new test
+cart = []; addItem("Orange", 5); addItem("Orange", 3); 
+// Test if the total quantity is correct 
+ console.log("Duplicate Item Aggregation Test:", getCartTotal() === 8 ? "Pass" : "Fail");
 // - Removing an item not in the cart
+cart = []; addItem("Pear", 2); removeItem("Grapes"); console.log("Remove Non-Existent Item Test:", getCartTotal() === 2 ? "Pass" : "Fail");
 // - Handling empty cart scenarios
+cart = []; console.log("Empty Cart Total Test:", getCartTotal() === 0 ? "Pass" : "Fail");
+// Removing all items
+cart = []; addItem("Book", 1); removeItem("Book"); console.log("Remove All Items Test:", getCartTotal() === 0 ? "Pass" : "Fail");
