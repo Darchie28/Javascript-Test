@@ -7,3 +7,4 @@ For the Login.js file there was an error for the Login Test 3, the expected valu
 For the shoppingCart.js file there was a part of code that was outside of the condition check. So I moved 'cart.push'.
   - also there was another error in the addItem function. The test would fail
    - There was an issue with handling hte case sensitivty. I editied the function by converting both the input item and stored cartItem.item to the same case.
+   - Also added test for duplicate items, removing items, and handling an empty cart
